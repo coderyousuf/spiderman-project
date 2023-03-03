@@ -1,5 +1,5 @@
  <!-- Favicon -->
- <link rel="icon" type="image/x-icon" href="{{ asset('admin') }}/assets/img/favicon/favicon.ico" />
+ {{-- <link rel="icon" type="image/x-icon" href="{{ asset('admin') }}/assets/img/favicon/favicon.ico" /> --}}
 
  <!-- Fonts -->
  <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -20,8 +20,11 @@
  {{-- <link rel="stylesheet" href="{{ asset('admin') }}/assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.css" /> --}}
 
  {{-- <link rel="stylesheet" href="{{ asset('admin') }}/assets/vendor/libs/apex-charts/apex-charts.css" /> --}}
+ <link rel="stylesheet" href="http://cdn.bootcss.com/toastr.js/latest/css/toastr.min.css">
 
-@method('admin_style')
+ {{-- <link rel="stylesheet" href="sweetalert2.min.css"> --}}
+
+@stack('admin_style')
 
  <!-- Page CSS -->
 

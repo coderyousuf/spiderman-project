@@ -67,31 +67,89 @@
             </a>
         </li>
         <li class="menu-header small text-uppercase">
-            <span class="menu-header-text">Pages</span>
+            <span class="menu-header-text">System Setting</span>
         </li>
+        @can('index-module')
         <li class="menu-item">
             <a href="javascript:void(0);" class="menu-link menu-toggle">
                 <i class="menu-icon tf-icons bx bx-dock-top"></i>
-                <div data-i18n="Account Settings">Account Settings</div>
+                <div data-i18n="Account Settings">Module Settings</div>
             </a>
             <ul class="menu-sub">
                 <li class="menu-item">
-                    <a href="pages-account-settings-account.html" class="menu-link">
-                        <div data-i18n="Account">Account</div>
+                    <a href="{{ route('module.index') }}" class="menu-link">
+                        <div data-i18n="Account">List</div>
                     </a>
                 </li>
                 <li class="menu-item">
-                    <a href="pages-account-settings-notifications.html" class="menu-link">
-                        <div data-i18n="Notifications">Notifications</div>
-                    </a>
-                </li>
-                <li class="menu-item">
-                    <a href="pages-account-settings-connections.html" class="menu-link">
-                        <div data-i18n="Connections">Connections</div>
+                    <a href="{{ route('module.create') }}" class="menu-link">
+                        <div data-i18n="Notifications">Create</div>
                     </a>
                 </li>
             </ul>
         </li>
+        @endcan
+        @can('index-permission')
+        <li class="menu-item">
+            <a href="javascript:void(0);" class="menu-link menu-toggle">
+                <i class="menu-icon tf-icons bx bx-lock-open-alt"></i>
+                <div data-i18n="Account Settings">Permission Settings</div>
+            </a>
+            <ul class="menu-sub">
+                <li class="menu-item">
+                    <a href="{{ route('permission.index') }}" class="menu-link">
+                        <div data-i18n="Account">List</div>
+                    </a>
+                </li>
+                <li class="menu-item">
+                    <a href="{{ route('permission.create') }}" class="menu-link">
+                        <div data-i18n="Notifications">Create</div>
+                    </a>
+                </li>
+            </ul>
+        </li>
+        @endcan
+        @can('index-role')
+        <li class="menu-item">
+            <a href="javascript:void(0);" class="menu-link menu-toggle">
+                <i class="menu-icon tf-icons bx bx-user-check"></i>
+                <div data-i18n="Account Settings">Role Settings</div>
+            </a>
+            <ul class="menu-sub">
+                <li class="menu-item">
+                    <a href="{{ route('role.index') }}" class="menu-link">
+                        <div data-i18n="Account">List</div>
+                    </a>
+                </li>
+                <li class="menu-item">
+                    <a href="{{ route('role.create') }}" class="menu-link">
+                        <div data-i18n="Notifications">Create</div>
+                    </a>
+                </li>
+            </ul>
+        </li>
+        @endcan
+        @can('index-user')
+        <li class="menu-item">
+            <a href="javascript:void(0);" class="menu-link menu-toggle">
+                <i class="menu-icon tf-icons bx bx-user-plus"></i>
+                <div data-i18n="Account Settings">User Settings</div>
+            </a>
+            <ul class="menu-sub">
+                <li class="menu-item">
+                    <a href="{{ route('users.index') }}" class="menu-link">
+                        <div data-i18n="Account">List</div>
+                    </a>
+                </li>
+                <li class="menu-item">
+                    <a href="{{ route('users.create') }}" class="menu-link">
+                        <div data-i18n="Notifications">Create</div>
+                    </a>
+                </li>
+            </ul>
+        </li>
+        @endcan
+
     </ul>
 
 
